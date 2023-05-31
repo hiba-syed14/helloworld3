@@ -1,3 +1,7 @@
+:root{
+    --primary: red;
+}
+
 body{
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -8,4 +12,33 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items:center;
+    padding: 2rem;
+}
+
+h1{
+    margin-bottom: 2rem;
+    font-size: 5vw;
+    font-weight: bold;
+    line-height: 1.4em;
+}
+
+h2{
+    margin-bottom: 4rem;
+    text-align: center;
+    font-size: 3vw;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.button{
+    padding: 1rem;
+    border:2px solid var(--primary);
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--primary);
+}
+
+.about{
+    padding:4rem;
+    color: white;
+    background-color: var(--primary);
 }
