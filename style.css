@@ -1,5 +1,7 @@
 :root{
-    --primary: red;
+    --primary: blue;
+    --spacing:4rem;
+    
 }
 
 body{
@@ -30,15 +32,95 @@ h2{
     text-transform: uppercase;
 }
 .button{
+    display: block;
+    width:max-content;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
     padding: 1rem;
-    border:2px solid var(--primary);
+    border:2px solid var(--button-color);
     font-weight: bold;
     text-decoration: none;
-    color: var(--primary);
+    color: var(--button-color);
 }
+
+.button:hover{
+    color: var(--button-hover-color);
+    background-color: var(--button-color);
+
+}
+
+
+.neutral-theme{
+    background-color: white;
+    --button-color:var(--primary);
+    --button-hover-color:white;
+
+}
+
+.primary-theme{
+    color: white;
+    background-color: var(--primary);
+    --button-color: white;
+    --button-hover-color:var(--primary);
+}
+
 
 .about{
     padding:4rem;
-    color: white;
-    background-color: var(--primary);
+   
 }
+
+.about-container{
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.about-img{
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto var(--spacing);
+    /* margin-top: 0;
+  margin-right: auto;
+  margin-bottom: var(--spacing);
+  margin-left: auto; */
+  filter:grayscale(100%);
+
+}
+
+.about-img:hover {
+    filter:grayscale(0);
+}
+
+p{
+    margin-bottom: 1em;
+    line-height: 1.4em;
+}
+
+blockquote{
+    margin-top: var(--spacing);
+    font-size: 2rem;
+    font-style: italic;
+    text-align: center;
+}
+
+section{
+    padding: var(--spacing);
+}
+
+cite{
+    display: block;
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-style: normal;
+}
+
+@media (min-width: 800px) {
+    .about-container {
+      display: flex;
+    }
+  
+    .about-text {
+      margin-left: var(--spacing);
+    }
+  }
